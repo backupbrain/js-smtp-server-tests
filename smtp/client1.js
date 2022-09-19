@@ -1,6 +1,7 @@
 /* a simple SMTP client with no dependencies in NodeJS  that connects to directly  to email servers and sends an email from "john@example.com" with the subject "Hello world" and the email body "This is a test"  */
 const net = require("net");
-const socket = net.connect({ host: "127.0.0.1", port: 2525 });
+const port = 2524;
+const socket = net.connect({ host: "127.0.0.1", port });
 
 socket.on("data", (data) => {
   const response = data.toString();

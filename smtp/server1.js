@@ -1,7 +1,7 @@
 var net = require("net");
 const fs = require("fs");
 const path = require("path");
-var filename = path.join(__dirname, "../", "emails.json");
+var filename = path.join("./", "emails.json");
 var emailArray = [];
 
 var server = net.createServer(function (socket) {
@@ -66,4 +66,4 @@ var server = net.createServer(function (socket) {
   });
 });
 
-server.listen(25);
+server.listen(2525);
